@@ -35,7 +35,6 @@ pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cud
 
 For masked language models:
 ```bash
-mkdir results
 python src/mlm_predict.py bert-base \
         data/test.core.masked.txt \
         results/bert-base.test.core.output.jsonl
