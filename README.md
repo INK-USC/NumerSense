@@ -34,13 +34,14 @@ pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cud
 ### Probing Experiments 
 
 ```bash
-python src/mlm_infer.py bert-base data/test.core.masked.tsv
+mkdir results
+python src/mlm_predict.py bert-base data/test.core.masked.txt results/test.core.output.jsonl
 ```
 
 Note that `bert-base` can be replaced by any model name in `[bert-base, bert-large, roberta-base, roberta-large]`.
 
 ```bash
-python src/gpt_infer.py gpt2 data/test.core.masked.tsv
+python src/gpt_predict.py gpt data/test.core.masked.txt results/test.core.output.jsonl
 ```
 
 #### Fine-tune a MLM model 
