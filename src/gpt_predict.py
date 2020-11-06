@@ -45,6 +45,7 @@ if __name__ == "__main__":
         data = f.read().splitlines()
     predictions = []
     for masked_sent in tqdm(data, desc="Probing"):
+        masked_sent = masked_sent.strip()
         result_list = []
         for num in num_list:
             sent = masked_sent.replace("<mask>", num)

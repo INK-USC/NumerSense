@@ -2,7 +2,6 @@
 pred_results/
 runs/
 saved_models/
-results/
 apex/
 data/remove_duplicates.py
 *_eval.py

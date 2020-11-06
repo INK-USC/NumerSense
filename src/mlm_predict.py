@@ -35,6 +35,7 @@ if __name__ == "__main__":
         data = f.read().splitlines()
     predictions = []
     for masked_sent in tqdm(data, desc="Probing"):
+        masked_sent = masked_sent.strip()
         result_list = model.predict_mask(masked_sent, options=num_list, num_results=1000)
         result_list.sort(key=lambda x:x["softmax"], reverse=True)
         # cast to float 
