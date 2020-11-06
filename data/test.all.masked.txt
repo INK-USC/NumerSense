@@ -150,7 +150,6 @@ a university professor in math is answering a question. he answers two could be 
 the inner sun is about <mask> and a half billion years old. 
 <mask> young riders playing polo. 
 cats have <mask> paws. 
-an earth odyssey has <mask> scientific instruments. 
 a pendulum clock usually has <mask> hands. 
 an hour is composed of sixty minutes or <mask> thousand, six hundred seconds. 
 humans have two arms and <mask> functional legs. 
@@ -3144,3 +3143,4 @@ a typical conservation usually needs at least <mask> people.
 a tennis ball has <mask> sides. 
 a person's hand generally has <mask> normal fingers, including the thumb. 
 a french horn has <mask> keys. 
+an earth odyssey has <mask> scientific instruments. 
