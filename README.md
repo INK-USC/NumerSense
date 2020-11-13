@@ -41,6 +41,10 @@ For masked language models:
 python src/mlm_predict.py bert-base \
         data/test.core.masked.txt \
         results/bert-base.test.core.output.jsonl
+
+python src/mlm_predict.py bert-base \
+        data/test.all.masked.txt \
+        results/bert-base.test.all.output.jsonl
 ```
 
 Note that `bert-base` can be replaced by any model name in `[bert-base, bert-large, roberta-base, roberta-large]`.
