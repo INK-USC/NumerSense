@@ -21,9 +21,10 @@ Code & Data for EMNLP 2020 paper:
 conda create -n numersense python=3.7
 conda activate numersense
 # install torch seperately at https://pytorch.org/get-started/locally/ if needed
-conda install pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=10.1 -c pytorch -n numersense
-pip install transformers==3.0.2
-pip install happytransformer -U
+conda install pytorch==1.6.0 cudatoolkit=10.1 -c pytorch -n numersense
+pip install transformers==3.3.1
+# pip install happytransformer -U
+pip install --editable happy-transformer
 pip install tensorboardX
 mkdir pred_results
 
@@ -53,7 +54,7 @@ For left-to-right language models:
 ```bash
 python src/gpt_predict.py gpt \
         data/test.core.masked.txt \
-        results/test.core.output.jsonl
+        results/gpt.test.core.output.jsonl 
 ```
 
 ### Fine-tune a MLM model 
