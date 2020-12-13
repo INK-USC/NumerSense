@@ -14,7 +14,7 @@ if __name__ == "__main__":
     model = None
     if model_str.startswith("reload_"):
         if model_str.startswith("reload_bert"):
-            model_str = model_str.replace("reload_roberta:", "")
+            model_str = model_str.replace("reload_bert:", "")
             model = HappyBERT(model_str)
         elif model_str.startswith("reload_roberta"):
             model_str = model_str.replace("reload_roberta:", "")
