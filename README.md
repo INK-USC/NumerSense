@@ -83,6 +83,10 @@ python src/mlm_infer.py \
         results/test.core.output.jsonl
 ```
 
+## Evaluation on Validation Set
+
+Check out `data/validation.masked.tsv`. We realease 200 annotated examples (132 from the `core` split and 68 from the `all` split) for method development so that users can better test their method frquently without submitting the prediction for the test set. **Note that these 200 examples should NOT be used for any training.** Also, they are still part of the the test data.
+
 ## Evaluation on Test Set
 
 To evaluate your model's ability on NumerSense's official test sets,
