@@ -26,7 +26,6 @@ pip install transformers==3.3.1
 # pip install happytransformer -U
 pip install --editable happy-transformer
 pip install tensorboardX
-mkdir pred_results
 
 # Optional:
 # Install apex following https://github.com/NVIDIA/apex#linux
@@ -39,13 +38,16 @@ pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cud
 
 For masked language models:
 ```bash
+# folder for your personal results
+mkdir pred_results
+
 python src/mlm_predict.py bert-base \
         data/test.core.masked.txt \
-        results/bert-base.test.core.output.jsonl
+        pred_results/bert-base.test.core.output.jsonl
 
 python src/mlm_predict.py bert-base \
         data/test.all.masked.txt \
-        results/bert-base.test.all.output.jsonl
+        pred_results/bert-base.test.all.output.jsonl
 ```
 
 Note that `bert-base` can be replaced by any model name in `[bert-base, bert-large, roberta-base, roberta-large]`.
@@ -54,7 +56,7 @@ For left-to-right language models:
 ```bash
 python src/gpt_predict.py gpt \
         data/test.core.masked.txt \
-        results/gpt.test.core.output.jsonl 
+        pred_results/gpt.test.core.output.jsonl 
 ```
 
 ### Fine-tune a MLM model 
@@ -77,10 +79,10 @@ CUDA_VISIBLE_DEVICES=0 python src/finetune_mlm.py \
 ```
 
 ```bash 
-python src/mlm_infer.py \
+python src/mlm_predict.py \
         reload_bert:saved_models/finetuned_bert_large \
         data/test.core.masked.txt \
-        results/test.core.output.jsonl
+        pred_results/test.core.output.jsonl
 ```
 
 ## Evaluation on Validation Set
