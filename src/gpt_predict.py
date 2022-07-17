@@ -15,7 +15,7 @@ if __name__ == "__main__":
     model_str = sys.argv[1]
     input_filename = sys.argv[2]
     output_filename = sys.argv[3]
-    cuda = True
+    cuda = torch.cuda.is_available() # TRUE if NVIDIA GPU is available
     model = None
     if model_str.startswith("reload_"):
         if model_str.startswith("reload_bert"):
