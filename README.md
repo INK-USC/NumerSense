@@ -82,7 +82,7 @@ CUDA_VISIBLE_DEVICES=0 python src/finetune_mlm.py \
 python src/mlm_predict.py \
         reload_bert:saved_models/finetuned_bert_large \
         data/test.core.masked.txt \
-        pred_results/test.core.output.jsonl
+        pred_results/bert-large-finetuned.test.core.output.jsonl
 ```
 
 ## Evaluation on Validation Set
