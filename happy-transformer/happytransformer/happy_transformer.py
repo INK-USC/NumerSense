@@ -349,7 +349,7 @@ class HappyTransformer:
         :return: float Tensor
         """
         # Collects the softmax of all tokens in list
-        return np.sum([softed[mask_id][op] for op in option])
+        return sum([softed[mask_id][op] for op in option])
 
     def init_sequence_classifier(self):
         """
